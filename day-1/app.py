@@ -8,13 +8,13 @@ class Elf:
 highest = -1
 
 with open('./input.txt') as file:
-    newElf = Elf()
+    new_elf = Elf()
     for line in file.readlines():
         if len(line) != 1:
-            newElf.items.append(int(line))
+            new_elf.items.append(int(line))
         else:
-            if(newElf.total() > highest):
-                highest = newElf.total()        
-            newElf = Elf()
+            if(new_elf.total() > highest):
+                highest = new_elf.total()        
+            new_elf = Elf()
 
 print(highest)
